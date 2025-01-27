@@ -18,7 +18,7 @@ public class EmployeeRepository {
 
     public Employee getEmployeeById(Integer employeeId) {
         Employee filterVal = employees.stream()
-                .filter(department -> department.getId().equals(employeeId))
+                .filter(employee -> employee.getId().equals(employeeId))
                 .findFirst()
                 .orElseThrow();
         return filterVal;
